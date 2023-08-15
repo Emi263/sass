@@ -1,0 +1,107 @@
+//@use "path_to_file" as namespace; =>namespace can be a single letter,
+//just to not create confusion between files
+@use "variables" as v;
+@use "utils" as u;
+
+//forward => imports styles from a file to this, no need to define with AS as @use
+@forward "base";
+
+//import _about.scss styles
+@forward "about/about";
+
+
+.header {
+  background-color: v.$header-color;
+  padding: 100px;
+  height: 300px;
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+    //img.bigger-image, means if image tag has the class 'bigger-image'
+    &.bigger-image {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+
+    li {
+      a {
+        text-decoration: none;
+        &:hover {
+          color: white;
+          font-size: larger;
+          transition: 0.1s ease;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: grid;
+  //3 columns, 25%, 25%, 50%
+  grid-template-columns: 1fr 1fr 2fr;
+
+  // media screen, when screen<500px, these styles will apply to "main"
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    height: 200px;
+    width: 100%;
+    //use the mixin to center the content
+    @include u.center;
+    text-align: center;
+    //&-> refers to .box, parent
+    //.box-1
+    &-1 {
+      //variable usage
+      background-color: v.$box-1-bg;
+    }
+    //.box-2
+    &-2 {
+      background-color: v.$box-2-bg;
+    }
+
+    //.box-3
+    &-3 {
+      background-color: v.$box-3-bg;
+    }
+  }
+}
+
+.article-container {
+  display: flex;
+  article {
+    height: 200px;
+    width: 100%;
+    background-color: aquamarine;
+    text-align: center;
+    @include u.center;
+    &:nth-child(1) {
+      background-color: rgb(157, 127, 255);
+    }
+  }
+}
+
+.footer {
+  height: 300px;
+  background-color: brown;
+  text-align: center;
+  @include u.center;
+}

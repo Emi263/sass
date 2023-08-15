@@ -1,0 +1,66 @@
+//math module, needs to be imported (read sass docs). Should be used as math.method 
+@use "sass:math";
+
+
+//mixin to center any element both horizontally and vertically
+//should be used in parent container
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+//function to conver px to rem . Returns rem value (ex: 1rem)
+@function rem($input) {
+  @return math.div($input, 16px) + rem;
+}
+
+//built-in sass function to return the inverse of a color
+@function invert-color($color) {
+  $inverse: change-color($color, $hue: hue($color) + 180);
+  @return $inverse;
+  
+}
+
+
+//simple function to return the sum, $numbers... -> means it can accept a list of numbers
+// as sum(2,4,5)
+
+@function sum ($numbers...) {
+  $sum: 0;
+  @each $number in $numbers  {
+    $sum: $sum + $number;
+  }
+  @return $sum;
+  
+}
+
+//same as JS loop, returns different classnames with different opacity
+// ex: .text-1 { opacity: 0.1 }
+
+
+@for $i from 1 to 9 {
+  .text-#{$i} {
+    opacity: $i * 0.1;
+   }
+}
+
+
+$theme: dark;
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+
+  //conditional logic. The background color will be #000 since theme = dark
+  @if $theme == light {
+    background-color: #336699;
+  } @else if $theme == dark {
+    background-color: #000;
+  } @else {
+    background-color: gray;
+  }
+}
