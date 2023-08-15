@@ -4,7 +4,7 @@ CSS TIPS
 1. [CSS concepts](https://web.dev/learn/css/)
 2. [CSS responsive](https://web.dev/learn/design/)
 3. Learn flexbox [here](https://flexbox.tech/)
-4. Free resources: 
+4. Free resources: \
    [Freecodecamp tutorial](https://www.youtube.com/watch?v=OXGznpKZ_sA&ab_channel=freeCodeCamp.org) \
    [HTML/CSS project](https://youtu.be/p0bGHP-PXD4)
 
