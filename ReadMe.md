@@ -1,18 +1,21 @@
 ## TIPS ##
 
 CSS TIPS
-1. [CSS concepts](https://web.dev/learn/css/)
-2. [CSS responsive](https://web.dev/learn/design/)
+1. [CSS Basic concepts](https://web.dev/learn/css/)
+2. [CSS responsive concepts](https://web.dev/learn/design/)
 3. Learn flexbox [here](https://flexbox.tech/)
-4. Free resources: 
-    [Freecodecamp tutorial](https://www.youtube.com/watch?v=OXGznpKZ_sA&ab_channel=freeCodeCamp.org) \
+4. Free CSS resources:
+   \
+   [Freecodecamp tutorial](https://www.youtube.com/watch?v=OXGznpKZ_sA&ab_channel=freeCodeCamp.org) \
    [HTML/CSS project](https://youtu.be/p0bGHP-PXD4)
 
-
+\
+\
 **SASS TIPS**
 
-**1. Sass oficial documentation**
- Read Sass documenation at official [documentation](https://sass.com)
+**1. Sass oficial documentation** \
+ Read Sass documenation at official [documentation](https://sass.com) \
+ \
 **2. Variables** 
   Sass allows you to use variables to store and reuse values throughout your stylesheets. 
   Declare variables using the $ symbol and take advantage of their flexibility and convenience.
